@@ -1,0 +1,14 @@
+
+<h1 class="mt-5">CAMPEÓN</h1>
+<form>
+  <div class="form-group">
+    <input type="text" class="form-control col-md-2 ml-2 mb-2" id="nombre" name="nombre" [(ngModel)]="nombreInput">
+    <button type="submit" class="col-md-1 btn btn-danger ml-2 mb-5" (click)="obtenerCampeon()">Buscar</button><br>
+    <p class="ml-2">Nombre: {{c1.nombre}}</p>
+    <p class="ml-2">Título: {{c1.titulo}}</p>
+    <img class="ml-2" src="{{c1.imagen}}"><br>
+
+    
+</div>
+
+</form>

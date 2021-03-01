@@ -1,0 +1,20 @@
+@font-face {
+    font-family: lol;
+    src: url(./fonts/heroes_legend/Heroes\ Legend.ttf);
+}
+html, div, body, head{
+    background-image: url("https://i.pinimg.com/originals/e9/08/09/e9080902cb37bd3d522ad0ac414330b8.jpg");
+    background-attachment: fixed;
+}
+html h1, p , h2 ,li, ul div, table , form, a{
+    font-family: "lol";
+    color: white;
+}
+img{
+    width: 30%;
+}
+
+#team img{
+    width: 100%;
+}
+

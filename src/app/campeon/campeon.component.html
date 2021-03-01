@@ -1,0 +1,55 @@
+
+<h1 class="mt-4 ml-2">TEAM BUILDER</h1>
+<form>
+  <div *ngFor="let pos of arrPos;let i = index">
+    <input class="ml-4" type="radio" name="pos" value="{{pos}}" (change)="radioChangeHandler($event)">{{arrNamePos[i]}}
+  </div>
+  <div class="form-group ml-4">
+    <input type="text" class="form-control col-md-2 mt-4" id="nombre" name="nombre" [(ngModel)]="nombreInput">
+    <button type="submit" class="btn btn-danger ml-4 mt-4" (click)="obtenerCampeon()">Elegir</button>
+    <button type="submit" class="btn btn-danger ml-4 mt-4" (click)="insertar(posElegida)">Insertar</button>
+    <button type="submit" class="btn btn-danger ml-4 mt-4" (click)="eliminar()">Eliminar Equipo</button>
+    
+    <p class="mt-4 ml-2">Nombre: {{c1.nombre}}</p>
+    <p class="mt-4 ml-2">Título: {{c1.titulo}}</p>
+       
+</div>
+<div id="team" class="container-fluid ml-2">
+<div class="table-bordered table-dark">
+  <tr>
+    <td class="col-md-1 col">TOP</td>
+    <td class="col-md-2 col">{{arrCamp[0].nombre}}</td>
+    <td class="col-md-3 col"><img src="{{arrCamp[0].imagen}}"></td>
+    <div class="w-100"></div>
+  </tr>
+  <tr>
+    <td class="col-md-1 col">JUNGLE</td>
+    <td class="col-md-2 col">{{arrCamp[1].nombre}}</td>
+    <td class="col-md-3 col"><img src="{{arrCamp[1].imagen}}"></td>
+    <div class="w-100"></div>
+  </tr>
+  <tr>
+    <td class="col-md-1 col">MID</td>
+    <td class="col-md-2 col">{{arrCamp[2].nombre}}</td>
+    <td class="col-md-3 col"><img src="{{arrCamp[2].imagen}}"></td>
+    <div class="w-100"></div>
+  </tr>
+  <tr>
+    <td class="col-md-1 col">ADC</td>
+    <td class="col-md-2 col">{{arrCamp[3].nombre}}</td>
+    <td class="col-md-3 col"><img src="{{arrCamp[3].imagen}}"></td>
+    <div class="w-100"></div>
+  </tr>
+  <tr>
+    <td class="col-md-1 col">SUPPORT</td>
+    <td class="col-md-2 col">{{arrCamp[4].nombre}}</td>
+    <td class="col-md-3 col"><img src="{{arrCamp[4].imagen}}"></td>
+    <div class="w-100"></div>
+  </tr>
+</div>
+</div>
+
+
+</form>
+
+

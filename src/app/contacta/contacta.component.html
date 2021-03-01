@@ -1,0 +1,21 @@
+
+<h1 class="mt-4">¿Quieres Darnos una idea sobre un nuevo Campeón?</h1>
+
+<form #formCampeon="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group col-md-4 mt-4">
+    <p><label>Nombre: </label><br>
+    <input type="text" class="mb-4 mt-4" name="nombre" #nombre="ngModel" [(ngModel)]="c2.nombre" required>
+    <span *ngIf="nombre.touched && !nombre.valid">El Campeón debe tener un nombre</span></p>
+    </div>
+    <div class="form-group col-md-4">
+    <p><label>Título: </label><br>
+    <input type="text" class="mb-4 mt-4" name="titulo" #titulo="ngModel" [(ngModel)]="c2.titulo" required>
+    <span *ngIf="titulo.touched && !titulo.valid">El Campeón debe tener un Título</span></p>
+    </div>
+    
+    <div class="form-group col-md-4 mt-4">
+        <label>Descripcion(opcional): </label>
+        <textarea class="form-control rounded-0 mb-4" rows="5" placeholder="Danos una Descripcion sobre tu idea de Campeón" ></textarea>
+    </div>
+  <input class="btn btn-danger ml-4" type="submit" value="Enviar">
+</form>
